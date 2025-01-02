@@ -1,0 +1,419 @@
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+.dashboard-oder{
+    width: auto;
+    min-height: 100%;
+    top:0;
+    right: 0;
+    padding: 0.5rem 1.5rem;
+    background: #eee;
+    z-index: 2;
+    font-size: 2rem;
+    transition: right 0.3s;
+
+}
+.dashboard-oder h3{
+    font-size: 3rem;
+    color: var(--black);
+    padding-top: 60px; 
+    padding-bottom: 15px;
+}
+.oder-address h4{
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.oder-time{
+    color:var(--light-color);
+}
+.oder-wrapper{
+    height: 180px;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 20px 0;
+
+}
+#dashboard-oder.visible {
+    display: block;
+  }
+  
+.dashboard.reduced {
+    width: calc( 100% - 360px);
+  }
+
+
+/* custom scroll  */
+.oder-wrapper::-webkit-scrollbar{
+    width: 7px;
+}
+.oder-wrapper::-webkit-scrollbar-track{
+    background-color:#eee;
+    border-radius: 20px;
+}
+.oder-wrapper::-webkit-scrollbar-thumb{
+    background-color:var(--light-color);
+    border-radius: 20px;
+}
+.oder-card{
+    display: grid;
+    grid-template-columns: 100px auto 50px; /* Điều chỉnh các cột để ảnh và chi tiết gần nhau hơn */
+    padding: 10px;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #fff; /* Màu nền trắng cho từng card */
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    margin-bottom: 20px; /* Khoảng cách giữa các card */
+}
+.oder-card p{
+    font-size: 1.7rem;
+}
+
+.oder-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.order-detail h4 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 0; 
+}
+.oder-detail input{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.oder-detail .fa-times{
+    float: right;
+    font-size: 3rem;
+    color: var(--black);
+}
+.oder-detail .fa-plus:hover{
+    color: var(--green);
+
+}
+.oder-detail .fa-minus:hover{
+    color: var(--green);
+
+}
+.oder-detail .fa-times:hover{
+    color: var(--green);
+    letter-spacing: 0.1rem;
+}
+.divider{
+    width: 100%;
+    border: 1px solid var(--black);
+}
+.order-total p{
+    font-size: 1.2rem;
+    padding:5px 0;
+}
+.order-total p span{
+    float: right;
+    font-weight: 600;
+}
+.order-promo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#eee;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 5px;
+    margin: 5px 0 10px 0;
+}
+.input-promo{
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+.button-promo{
+    float: right;
+    border: none;
+    border-radius: 5px;
+    height: 80%;
+    width: 20%;
+    cursor: pointer;
+    background-color: var(--black);
+    color:#fff;
+}
+.button-promo:hover{
+    color: var(--green);
+    letter-spacing: 0.1rem;
+
+}
+.checkout{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: #192a56;
+    border: none;
+    border-radius: 20px;
+    color:#fff;
+    cursor: pointer;
+}
+.checkout:hover{
+    color: var(--green);
+    letter-spacing: 0.1rem;
+
+}
+.footer{
+    height: 100%;
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.dashboard-oder {
+    width: auto;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1.5rem;
+    background: #eee;
+    z-index: 2;
+    font-size: 2rem;
+    transition: right 0.3s;
+}
+
+    .dashboard-oder h3 {
+        font-size: 3rem;
+        color: var(--black);
+        padding-top: 60px;
+        padding-bottom: 15px;
+    }
+
+.oder-address h4 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.oder-time {
+    color: var(--light-color);
+}
+
+.oder-wrapper {
+    height: 180px;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 20px 0;
+}
+
+#dashboard-oder.visible {
+    display: block;
+}
+
+.dashboard.reduced {
+    width: calc( 100% - 360px);
+}
+
+
+/* custom scroll  */
+.oder-wrapper::-webkit-scrollbar {
+    width: 7px;
+}
+
+.oder-wrapper::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+.oder-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--light-color);
+    border-radius: 20px;
+}
+
+.oder-card {
+    display: grid;
+    grid-template-columns: 100px auto 50px; /* Điều chỉnh các cột để ảnh và chi tiết gần nhau hơn */
+    padding: 10px;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #fff; /* Màu nền trắng cho từng card */
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    margin-bottom: 20px; /* Khoảng cách giữa các card */
+}
+
+    .oder-card p {
+        font-size: 1.7rem;
+    }
+
+.oder-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.order-detail h4 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 0;
+}
+
+.oder-detail input {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.oder-detail .fa-times {
+    float: right;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.oder-detail .fa-plus:hover {
+    color: var(--green);
+}
+
+.oder-detail .fa-minus:hover {
+    color: var(--green);
+}
+
+.oder-detail .fa-times:hover {
+    color: var(--green);
+    letter-spacing: 0.1rem;
+}
+
+.divider {
+    width: 100%;
+    border: 1px solid var(--black);
+}
+
+.order-total p {
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+
+    .order-total p span {
+        float: right;
+        font-weight: 600;
+    }
+
+.order-promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 5px;
+    margin: 5px 0 10px 0;
+}
+
+.input-promo {
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+
+.button-promo {
+    float: right;
+    border: none;
+    border-radius: 5px;
+    height: 80%;
+    width: 20%;
+    cursor: pointer;
+    background-color: var(--black);
+    color: #fff;
+}
+
+    .button-promo:hover {
+        color: var(--green);
+        letter-spacing: 0.1rem;
+    }
+
+.checkout {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: #192a56;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+    .checkout:hover {
+        color: var(--green);
+        letter-spacing: 0.1rem;
+    }
+
+.footer {
+    height: 100%;
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+
+
+@media screen and (max-width:680px) {
+    .dashboard {
+        padding-right: 0;
+    }
+
+    .dashboard-oder {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+
+@media screen and (max-width:680px) {
+    .dashboard{
+        padding-right: 0;
+    }
+    .dashboard-oder{
+        width: 100%;
+        left: 0;
+    }
+}

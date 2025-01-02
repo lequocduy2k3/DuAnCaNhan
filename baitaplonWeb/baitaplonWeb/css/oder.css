@@ -1,0 +1,345 @@
+﻿:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+.dashboard{
+    height: 100%;
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 60px;
+    transition: width 0.3s;
+
+}
+.dashboard-banner{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 7rem;
+    padding: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.dashboard-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.banner-promo{
+    position: absolute;
+    color:#fff;
+    top:25%;
+    left: 10%;
+    font-weight: 800;
+    font-size: 20px;
+}
+.banner-promo span{
+    color: var(--green);
+}
+.dashboard-title{
+    color: var(--black);
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.dashboard-menu{
+    display: flex;
+    gap:10px;
+    padding: 0.3rem 1rem;
+    overflow-x : auto;
+    padding-bottom: 15px;
+}
+.dashboard-menu a{
+    text-decoration: none;
+    text-align:center;
+    border-radius: 20px;
+    min-width: 120px;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    color:var(--box-shadow);
+    background-color: #eee;  
+}
+.dashboard-menu a:hover{
+    background:var(--green);
+    letter-spacing: 0.1rem;
+    color:#fff
+}
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*grid-template-columns: repeat(3, 1fr);*/
+    gap: 20px;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+.dashboard-card {
+    background-color: #eee;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Đảm bảo căn giữa nội dung */
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-detail {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+    .card-detail h4 {
+        font-size: 1.5rem;
+        color: var(--black);
+    }
+
+.dashboard-card:hover {
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+
+.card-detail h4 span {
+    float: right;
+    font-size: 1.2rem;
+}
+
+.card-time {
+    color: var(--light-color);
+}
+
+.card-detail a {
+    color: var(--black);
+    text-decoration: none; /* Bỏ gạch chân mặc định của link */
+}
+
+    .card-detail a:hover {
+        color: var(--green);
+        letter-spacing: 0.1rem;
+    }
+
+.btn-add-to-cart {
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Khoảng cách từ các phần tử khác */
+    width: 100%; /* Đặt chiều rộng là 100% để phù hợp với chiều rộng card */
+}
+
+    .btn-add-to-cart:hover {
+        background-color: var(--green);
+    }
+b
+
+.btn-add-to-cart:active {
+    background-color: #d84315; /* Màu n?n khi nh?n, chuy?n sang màu ?? s?m h?n */
+}
+
+
+
+.dashboard-oder{
+    width: 340px;
+    min-height: 100%;
+    position:fixed;
+    top:0;
+    right: 0;
+    padding: 0.5rem 1.5rem;
+    background: #eee;
+    z-index: 3;
+    font-size: 2rem;
+    transition: right 0.3s;
+    display: block;
+
+}
+.dashboard-oder h3{
+    font-size: 3rem;
+    color: var(--black);
+    padding-top: 60px; 
+    padding-bottom: 15px;
+}
+.oder-address h4{
+    font-size: 1.5rem;
+    line-height: 2;
+}
+.oder-time{
+    color:var(--light-color);
+}
+.oder-wrapper{
+    height: 180px;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 20px 0;
+    display: none;
+}
+#dashboard-oder.visible {
+    display: block;
+  }
+  
+.dashboard.reduced {
+    width: calc( 100% - 360px);
+  }
+
+
+/* custom scroll  */
+.oder-wrapper::-webkit-scrollbar{
+    width: 7px;
+}
+.oder-wrapper::-webkit-scrollbar-track{
+    background-color:#eee;
+    border-radius: 20px;
+}
+.oder-wrapper::-webkit-scrollbar-thumb{
+    background-color:var(--light-color);
+    border-radius: 20px;
+}
+.oder-card{
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.5fr;
+    padding: 10px 0;
+    gap:5px;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+.oder-card p{
+    font-size: 1.7rem;
+}
+.oder-image{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.oder-detail input{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.oder-detail .fa-times{
+    float: right;
+    font-size: 3rem;
+    color: var(--black);
+}
+.oder-detail .fa-plus:hover{
+    color: var(--green);
+
+}
+.oder-detail .fa-minus:hover{
+    color: var(--green);
+
+}
+.oder-detail .fa-times:hover{
+    color: var(--green);
+    letter-spacing: 0.1rem;
+
+}
+.divider{
+    width: 100%;
+    border: 1px solid var(--black);
+}
+.order-total p{
+    font-size: 1.7rem;
+    padding:5px 0;
+}
+.order-total p span{
+    float: right;
+    font-weight: 600;
+}
+.order-promo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#eee;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 5px;
+    margin: 5px 0 10px 0;
+}
+.input-promo{
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+.button-promo{
+    float: right;
+    border: none;
+    border-radius: 5px;
+    height: 80%;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--black);
+    color:#fff;
+}
+.button-promo:hover{
+    color: var(--green);
+    letter-spacing: 0.1rem;
+
+}
+.checkout{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: #192a56;
+    border: none;
+    border-radius: 20px;
+    color:#fff;
+    cursor: pointer;
+}
+.checkout:hover{
+    color: var(--green);
+    letter-spacing: 0.1rem;
+
+}
+.footer{
+    height: 100%;
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+
+
+
+@media screen and (max-width:680px) {
+    .dashboard {
+        padding-right: 0;
+        
+    }
+    .dashboard-oder{
+        width: 100%;
+        left: 0;
+    }
+    .dashboard-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
